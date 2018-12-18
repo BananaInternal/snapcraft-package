@@ -1,0 +1,35 @@
+name: banana9
+version: 9.0.3
+grade: stable
+summary: Banana Snap
+description: Banana snap
+confinement: devmode
+
+apps:
+  banana9:
+    command: usr/bin/bananaExperimental9
+    plugs: [x11, home, network, gsettings, desktop, desktop-legacy]
+    desktop: bananaExperimental9.desktop 
+    environment:
+       QT_QPA_PLATFORM_PLUGIN_PATH: usr/plugins
+       QT_QPA_PLATFORMTHEME: qt5ct
+    
+parts:
+  banana9:
+    source: ./banana9.tgz
+    plugin: dump
+    stage-packages:
+      - libgl1
+      - libgl1-mesa-glx
+      - libglu1-mesa
+      - libfreetype6
+
+    override-prime: |
+      snapcraftctl prime
+      echo "Removing install_banana9.sh and updating start_banana9.sh..."
+      sed -i '9imkdir -p "$XDG_RUNTIME_DIR"' start_bananaExperimental9.sh
+      rm install-banana.sh
+    
+      
+
+    
