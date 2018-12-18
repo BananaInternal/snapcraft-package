@@ -24,7 +24,8 @@ File library to be used for creating a snap.
 
 ## Info request
 - How is the software version determined? Ideally there would be a command that could be run by the build script to gather the version (e.g. "banana --version" to print out 1.24 or something like that)
-banana9 -cmd=version
+  - banana9 -cmd=version
+  - see https://www.banana.ch/doc9/en/node/4325
 - Are there any known errors or warnings in the software currently (popups, stdout output) that I should be aware of?
 - Snaps work a bit differently than regular Linux software and are intended to read/write to specific directories, are there any directories Banana uses which will need to be reconfigured? YES for license code see above.
 - Should I assume that the snap just needs to be created from the tar archive? YES 
