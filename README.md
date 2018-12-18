@@ -18,9 +18,10 @@ File library to be used for creating a snap.
 ## Roadmap / to do 
 - Create a snapcraft yalm configuration file for Banana Accounting 9 using QT (DONE)
   - error when creating the snap file related to the library Qt Web Engine (Editor within Banana Accounting documents table does not work).
+- Verify inclusion for libssl e libcrypto
 - Add description and metadata for images and others (check what is needed or suitable?)
 - Verify functioning and solve problems.
-  - Test under 16.04 and there was problem with the registring the banana accounting file extension ".ac2"
+  - Test under 16.04 and there was problem with the registring the banana accounting file extension ".ac2" MIME TYPE
 
 ### Checklist check
 
@@ -31,7 +32,7 @@ File library to be used for creating a snap.
   * [] Fedora 29
   * [] SUSE (latest version)
 
-Test other functionalities
+Test basic functionalities
 * [] Installation
 * [] Desktop integration
   * [] The program appears below the list of applications
