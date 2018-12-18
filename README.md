@@ -21,10 +21,27 @@ File library to be used for creating a snap.
 - Add description and metadata for images and others (check what is needed or suitable?)
 - Verify functioning and solve problems.
   - Test under 16.04 and there was problem with the registring the banana accounting file extension ".ac2"
+
+### Checklist check
+
 - Test with different linux distributions.
-  - Ubuntu 16.04, 18.04, 18.10 
-  - SUSE (latest version)
-- Test for interting licence key (professional version that the user buy)
+  * [] Ubuntu 18.10
+  * [] Ubuntu 18.04 LTS
+  * [] Ubuntu 16.04 LTS
+  * [] Fedora 29
+  * [] SUSE (latest version)
+
+Test other functionalities
+* [] Installation
+* [] Desktop integration
+  * [] The program appears below the list of applications
+  * [] The icon is correct
+  * [] Ac2 extension is registered
+* [] Create new file
+* [] Save file
+* [] Open files with double-click
+* [] Print preview
+* [] Insert license key
 
 
 ## Info request
