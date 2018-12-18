@@ -12,6 +12,9 @@ File library to be used for creating a snap.
 - https://www.banana.ch/en/bananaexpm9_en
 - https://www.banana.ch/accounting/files/banana9/expm/bananaexpm9.tgz
 
+## Problems
+- We use a libpng library that can be older then the libpng library available on the OS.
+
 ## Roadmap / to do 
 - Create a snapcraft yalm configuration file for Banana Accounting 9 using QT (DONE)
   - error when creating the snap file related to the library Qt Web Engine (Editor within Banana Accounting documents table does not work).
