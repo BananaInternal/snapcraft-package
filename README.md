@@ -44,8 +44,8 @@ Test basic functionalities
 * [] Print preview
 * [] Insert license key
 * [] HTLM Editor
-     - See https://www.banana.ch/doc9/en/node/8353
-	 - Use file test/company_htmltest.ac2
+     - See [Banana Editor Documenatation](https://www.banana.ch/doc9/en/node/8353)
+     - Use file  [test/company_htmltest.ac2](https://github.com/BananaInternal/snapcraft-package/raw/master/test/company_htmltest.ac2)
 
 
 ## Info request
