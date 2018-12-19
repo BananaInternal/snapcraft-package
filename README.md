@@ -17,7 +17,7 @@ File library to be used for creating a snap.
 
 ## Roadmap / to do 
 - Create a snapcraft yalm configuration file for Banana Accounting 9 using QT (DONE)
-  - error when creating the snap file related to the library Qt Web Engine .
+  - Warning  when creating the snap file related to the library Qt Web Engine. The library is not included. The HTML Editor does not work.
 - Verify inclusion for libssl e libcrypto
 - Add description and metadata for images and others (check what is needed or suitable?)
 - Verify functioning and solve problems.
