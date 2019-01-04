@@ -1,13 +1,15 @@
 # snapcraft-package
 Snapcraft package for Banana Accounting
 
-## Concept
+## Concept for installation
+### All binary and library files included
 The snapcraft package includes the compiled executable file and all the necessary libraries (QT and others). 
-Theoretically QT libraries are binary compatible, but due to bugs in QT, Banana Accounting has been optimized to wors with a specific library version. Currently it is Qt 5.12.
+Theoretically QT libraries are binary compatible, but due to bugs in QT, Banana Accounting has been optimized to works with a specific library version. Currently it is Qt 5.12.
 Therefore we do not use the QT libraries already installed on the computer, but we provide a specific one. 
 This approach takes more  space, but the software is stable.
 
-File library to be used for creating a snap. 
+### Filefor installation 
+All the file that are used for installation are includer in the bananaexpm9.tgz file.
 - Banana Accounting 9 Experimental version, with Qt 5.12
 - https://www.banana.ch/en/bananaexpm9_en
 - https://www.banana.ch/accounting/files/banana9/expm/bananaexpm9.tgz
