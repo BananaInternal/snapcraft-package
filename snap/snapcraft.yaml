@@ -1,9 +1,14 @@
 name: banana9
 version: 9.0.3
 grade: stable
-summary: Banana Snap
-description: Banana snap
+# A 78 character limited sentence that summarizes the snap
+summary: Banana Accounting Software
+# A multiline description of the snap
+description: Exel-like, professional Accounting Software
+# Relative path of a PNG/SVG icon from the source tree root to represent the snap
+#icon: banico.svg
 confinement: devmode
+type: app
 
 apps:
   banana9:
