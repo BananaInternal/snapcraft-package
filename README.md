@@ -21,19 +21,22 @@ All the file that are used for installation are includer in the bananaexpm9.tgz 
 - Add description and metadata for images and others. 
 
 
-## Todos
+### Todos
 1. Create a snapcraft yalm configuration file for Banana Accounting 9 using QT (DONE). Warning  when creating the snap file related to the library Qt Web Engine. The library is not included. The HTML Editor does not work.
 2. Verify inclusion for libssl e libcrypto
-3. Verify functioning and solve problems.
+3. Verify that functioning and solve problems.
   Test under 16.04 and there was problem with the registring the banana accounting file extension ".ac2" MIME TYPE
 
-## Checks
+## Tests 
+1. Snap package creation should work.
+2. Software installation should works on the reference Distribution Ubuntu 18.10.
+3. Software installation should works on all defined Distributions.
 
 ### Snap Package creation
 Verify that the creation of the snap package works, without problems.
 
-### Software Installation and Sofware running
-Use the snappackage to install the software. 
+### Software Installation and Software running
+Use the snappackage to install the software. Reference Distribution Ubuntu 18.10.
 * [] Installation
 * [] Desktop integration
   * [] The program appears below the list of applications
@@ -48,9 +51,9 @@ Use the snappackage to install the software.
      - See [Banana Editor Documenatation](https://www.banana.ch/doc9/en/node/8353)
      - Use file  [test/company_htmltest.ac2](https://github.com/BananaInternal/snapcraft-package/raw/master/test/company_htmltest.ac2)
 
-### Different Linux Distribution Check
-Verify that the software install and works with different Distributions. 
-  * [] Ubuntu 18.10
+### Different Linux Distribution tests
+Verify that the snapcraft package allow to install the software on different Distributions. 
+  * [] Ubuntu 18.10. Reference Distribution. If it works on this, then tests on the other one.
   * [] Ubuntu 18.04 LTS
   * [] Ubuntu 16.04 LTS
   * [] Fedora 29
