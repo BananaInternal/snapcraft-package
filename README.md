@@ -36,7 +36,7 @@ All the file that are used for installation are includer in the bananaexpm9.tgz 
 Verify that the creation of the snap package works, without problems.
 
 ### Software Installation and Software running
-Use the snappackage to install the software. Reference Distribution Ubuntu 18.10.
+Use the snappackage to install the software. Reference Distribution Ubuntu 18.04 LTS.
 * [] Installation
 * [] Desktop integration
   * [] The program appears below the list of applications
@@ -53,8 +53,8 @@ Use the snappackage to install the software. Reference Distribution Ubuntu 18.10
 
 ### Different Linux Distribution tests
 Verify that the snapcraft package allow to install the software on different Distributions. 
-  * [] Ubuntu 18.10. Reference Distribution. If it works on this, then tests on the other one.
-  * [] Ubuntu 18.04 LTS
+  * [] Ubuntu 18.04 LTS. Reference Distribution. If it works on this, then tests on the other one.
+  * [] Ubuntu 18.10.
   * [] Ubuntu 16.04 LTS
   * [] Fedora 29
   * [] SUSE (latest version)
