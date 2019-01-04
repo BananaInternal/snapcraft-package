@@ -23,23 +23,20 @@ File library to be used for creating a snap.
 - Verify functioning and solve problems.
   - Test under 16.04 and there was problem with the registring the banana accounting file extension ".ac2" MIME TYPE
 
-### Checklist check
+## Check 
 
-- Test with different linux distributions.
-  * [] Ubuntu 18.10
-  * [] Ubuntu 18.04 LTS
-  * [] Ubuntu 16.04 LTS
-  * [] Fedora 29
-  * [] SUSE (latest version)
+### Snap Package creation
+Verify that the creation of the snap package works, without problems.
 
-Test basic functionalities
+### Software Installation and Sofware running
+Use the snappackage to install the software. 
 * [] Installation
 * [] Desktop integration
   * [] The program appears below the list of applications
   * [] The icon is correct
-  * [] Ac2 extension is registered
+  * [] Ac2 and Sba extension is registered
 * [] Create new file
-* [] Save file
+* [] Save file (choose user directory)
 * [] Open files with double-click
 * [] Print preview
 * [] Insert license key
@@ -47,6 +44,13 @@ Test basic functionalities
      - See [Banana Editor Documenatation](https://www.banana.ch/doc9/en/node/8353)
      - Use file  [test/company_htmltest.ac2](https://github.com/BananaInternal/snapcraft-package/raw/master/test/company_htmltest.ac2)
 
+### Different Linux Distribution Check
+Verify that the software install and works with different Distributions. 
+  * [] Ubuntu 18.10
+  * [] Ubuntu 18.04 LTS
+  * [] Ubuntu 16.04 LTS
+  * [] Fedora 29
+  * [] SUSE (latest version)
 
 ## Info request
 - How is the software version determined? Ideally there would be a command that could be run by the build script to gather the version (e.g. "banana --version" to print out 1.24 or something like that)
