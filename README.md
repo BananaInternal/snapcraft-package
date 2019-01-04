@@ -16,7 +16,7 @@ All the file that are used for installation are includer in the bananaexpm9.tgz 
 
 ### Decisions to be made 
 - We use a libpng library that can be older then the libpng library available on the OS.
-- **Evaluate if it is better to use the "install-banana.sh" or include some commands directly in the snapcraft yalm **
+- **Evaluate if it is better to use the "install-banana.sh" or include some commands directly in the snapcraft yalm**
 - **Evaluate if it is better to use the "start_bananaExperimental9.sh" or if it better to create a different one or include some commands directly in the snapcraft yalm.**
 - Add description and metadata for images and others. 
 
