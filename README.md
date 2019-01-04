@@ -14,16 +14,17 @@ File library to be used for creating a snap.
 
 ## Problems
 - We use a libpng library that can be older then the libpng library available on the OS.
+- Evaluate if it is better to use the "install-banana.sh" or include some commands directly in the snapcraft yalm 
 
 ## Roadmap / to do 
-- Create a snapcraft yalm configuration file for Banana Accounting 9 using QT (DONE)
+1. Create a snapcraft yalm configuration file for Banana Accounting 9 using QT (DONE)
   - Warning  when creating the snap file related to the library Qt Web Engine. The library is not included. The HTML Editor does not work.
-- Verify inclusion for libssl e libcrypto
-- Add description and metadata for images and others (check what is needed or suitable?)
-- Verify functioning and solve problems.
+2. Verify inclusion for libssl e libcrypto
+3. Add description and metadata for images and others. Made available by Banana.ch
+4. Verify functioning and solve problems.
   - Test under 16.04 and there was problem with the registring the banana accounting file extension ".ac2" MIME TYPE
 
-## Check 
+## Checks
 
 ### Snap Package creation
 Verify that the creation of the snap package works, without problems.
