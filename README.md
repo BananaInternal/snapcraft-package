@@ -2,29 +2,30 @@
 Snapcraft package for Banana Accounting
 
 ## Concept for installation
-### All binary and library files included
+### Include in the package all binaries and library
 The snapcraft package includes the compiled executable file and all the necessary libraries (QT and others). 
 Theoretically QT libraries are binary compatible, but due to bugs in QT, Banana Accounting has been optimized to works with a specific library version. Currently it is Qt 5.12.
 Therefore we do not use the QT libraries already installed on the computer, but we provide a specific one. 
 This approach takes more  space, but the software is stable.
 
-### Filefor installation 
+### Files for installation 
 All the file that are used for installation are includer in the bananaexpm9.tgz file.
 - Banana Accounting 9 Experimental version, with Qt 5.12
 - https://www.banana.ch/en/bananaexpm9_en
 - https://www.banana.ch/accounting/files/banana9/expm/bananaexpm9.tgz
 
-## Problems
+## Decision to be made 
 - We use a libpng library that can be older then the libpng library available on the OS.
 - Evaluate if it is better to use the "install-banana.sh" or include some commands directly in the snapcraft yalm 
+- Evaluate if it is better to use the "start_bananaExperimental9.sh" or if it better to create a different one or include some commands directly in the snapcraft yalm. 
+- Add description and metadata for images and others. 
 
-## Roadmap / to do 
-1. Create a snapcraft yalm configuration file for Banana Accounting 9 using QT (DONE)
-  - Warning  when creating the snap file related to the library Qt Web Engine. The library is not included. The HTML Editor does not work.
+
+## Todos
+1. Create a snapcraft yalm configuration file for Banana Accounting 9 using QT (DONE). Warning  when creating the snap file related to the library Qt Web Engine. The library is not included. The HTML Editor does not work.
 2. Verify inclusion for libssl e libcrypto
-3. Add description and metadata for images and others. Made available by Banana.ch
-4. Verify functioning and solve problems.
-  - Test under 16.04 and there was problem with the registring the banana accounting file extension ".ac2" MIME TYPE
+3. Verify functioning and solve problems.
+  Test under 16.04 and there was problem with the registring the banana accounting file extension ".ac2" MIME TYPE
 
 ## Checks
 
