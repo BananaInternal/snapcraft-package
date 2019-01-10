@@ -54,8 +54,8 @@ baseDir=$(readlink -f  "$scriptDir/../..")
 baseDirInstaller=$baseDir/installer
 originalBinDir=$baseDir/build-release
 
-qtVersion=5.11
-qtDir=~/Qt/5.11.1
+qtVersion=5.12
+qtDir=~/Qt/5.12.0
 extraLibDir=$baseDir/libs/lib/linux
 
 #Leggi versione programma dal file banana.h
