@@ -19,7 +19,7 @@ All the file that are used for installation are includer in the bananaexpm9.tgz 
 - **Evaluate if it is better to use the "install-banana.sh" or include some commands directly in the snapcraft yalm**
 - **Evaluate if it is better to use the "start_bananaExperimental9.sh" or if it better to create a different one or include some commands directly in the snapcraft yalm.**
 - Add description and metadata for images and others. 
-
+- **New** the snap will be build based on the tgz file. The tgz file is build for the appimage, with the script  	"create_appImage.sh". In case that for creating a snap it is suitable to change the tgz or the structure, suggest possible changes and modify also the file "create_appImage.sh". New tgz file  should obviously maintain compatibility installing on all linux systems.  
 
 ### Todos
 1. Create a snapcraft yalm configuration file for Banana Accounting 9 using QT (DONE). Warning  when creating the snap file related to the library Qt Web Engine. The library is not included. The HTML Editor does not work.
