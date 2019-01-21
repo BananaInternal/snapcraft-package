@@ -1,40 +1,75 @@
-name: banana9
-version: 9.0.3
-grade: stable
-# A 78 character limited sentence that summarizes the snap
+name: banana
 summary: Banana Accounting Software
-# A multiline description of the snap
-description: Exel-like, professional Accounting Software
-# Relative path of a PNG/SVG icon from the source tree root to represent the snap
-#icon: banico.svg
-confinement: devmode
-type: app
+description: Excel-like, professional accounting software
+confinement: strict
+grade: stable
+version: '9.0.3'
+# version: latest
+# version-script: |
+#   export LD_LIBRARY_PATH=$SNAPCRAFT_PRIME/usr/lib:$LD_LIBRARY_PATH
+#   export QML_IMPORT_PATH=$SNAPCRAFT_PRIME/usr/qml
+#   export QML2_IMPORT_PATH=$SNAPCRAFT_PRIME/usr/qml
+#   export QT_QPA_PLATFORM_PLUGIN_PATH=$SNAPCRAFT_PRIME/usr/plugins
+#   export QT_QPA_PLATFORMTHEME=qt5ct
+#   $SNAPCRAFT_PRIME/usr/bin/bananaExperimental9 -cmd=version
+
+architectures:
+  - build-on: amd64
+  - build-on: i386
 
 apps:
-  banana9:
-    command: usr/bin/bananaExperimental9
-    plugs: [x11, home, network, gsettings, desktop, desktop-legacy]
-    desktop: bananaExperimental9.desktop 
+  banana:
     environment:
-       QT_QPA_PLATFORM_PLUGIN_PATH: usr/plugins
-       QT_QPA_PLATFORMTHEME: qt5ct
-    
+      PATH: $PATH:$SNAP/bin
+      LD_LIBRARY_PATH: $SNAP/usr/lib:$LD_LIBRARY_PATH
+      QML_IMPORT_PATH: $SNAP/usr/qml
+      QML2_IMPORT_PATH: $SNAP/usr/qml
+      QT_QPA_PLATFORM_PLUGIN_PATH: $SNAP/usr/plugins
+      QT_QPA_PLATFORMTHEME: qt5ct
+    command: desktop-launch $SNAP/usr/bin/bananaExperimental9
+    plugs:
+      - home
+      - x11
+      - unity7
+      - wayland
+      - desktop
+      - desktop-legacy
+      - opengl
+      - removable-media
+      - network
+      - network-bind
+      - network-manager
+      - network-control
+      - alsa
+      - cups-control
+      - gsettings
+
 parts:
-  banana9:
-    source: ./banana9.tgz
+  banana:
     plugin: dump
+    after: [desktop-glib-only]
+    source: https://www.banana.ch/accounting/files/banana9/expm/bananaexpm9.tgz
     stage-packages:
-      - libgl1
+      - libssl-dev
+      - xdg-user-dirs
       - libgl1-mesa-glx
-      - libglu1-mesa
-      - libfreetype6
+      - libgl1-mesa-dri
+      - libegl1-mesa
+      - libxcursor1
+      - libnss3
+      - libxcomposite1
+      - libxi6
+      - libxtst6
+      - libasound2
+      - ttf-ubuntu-font-family
+      - dmz-cursor-theme
+      - shared-mime-info
+      - libxkbcommon0
+      - light-themes
+      - zlib1g
+    override-pull: |
+      snapcraftctl pull
+      rm usr/lib/libssl.so
+      rm usr/lib/libcrypto.so
+    build-attributes: [no-system-libraries]
 
-    override-prime: |
-      snapcraftctl prime
-      echo "Removing install_banana9.sh and updating start_banana9.sh..."
-      sed -i '9imkdir -p "$XDG_RUNTIME_DIR"' start_bananaExperimental9.sh
-      rm install-banana.sh
-    
-      
-
-    

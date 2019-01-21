@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Banana
+Exec=banana.banana
+Icon=${SNAP}/banico.svg
+Type=Application
+Categories=Office;
+Terminal=false
+MimeType=application/ac2;application/x-banana-extension-ac2;application/vnd.banana-accounting;
