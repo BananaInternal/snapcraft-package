@@ -3,8 +3,7 @@ summary: Banana Accounting Software
 description: Excel-like, professional accounting software
 confinement: strict
 grade: stable
-version: '9.0.3'
-# version: latest
+version: latest
 # version-script: |
 #   export LD_LIBRARY_PATH=$SNAPCRAFT_PRIME/usr/lib:$LD_LIBRARY_PATH
 #   export QML_IMPORT_PATH=$SNAPCRAFT_PRIME/usr/qml
@@ -27,6 +26,7 @@ apps:
       QT_QPA_PLATFORM_PLUGIN_PATH: $SNAP/usr/plugins
       QT_QPA_PLATFORMTHEME: qt5ct
     command: desktop-launch $SNAP/usr/bin/bananaExperimental9
+    desktop: bananaExperimental9.desktop
     plugs:
       - home
       - x11
@@ -71,5 +71,9 @@ parts:
       snapcraftctl pull
       rm usr/lib/libssl.so
       rm usr/lib/libcrypto.so
+    override-build: |
+      sed -i 's|Icon=banico|Icon=${SNAP}/banico.svg|' $SNAPCRAFT_PART_BUILD/bananaExperimental9.desktop
+      sed -i 's|Exec=.*|Exec=banana.banana|' $SNAPCRAFT_PART_BUILD/bananaExperimental9.desktop
+      snapcraftctl build
     build-attributes: [no-system-libraries]
 
