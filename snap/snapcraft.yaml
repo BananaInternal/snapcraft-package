@@ -65,6 +65,7 @@ parts:
       - dmz-cursor-theme
       - shared-mime-info
       - libxkbcommon0
+      - libxkbcommon-x11-0
       - light-themes
       - zlib1g
     override-pull: |
