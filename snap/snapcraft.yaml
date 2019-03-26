@@ -1,6 +1,6 @@
 name: banana
 summary: Banana Accounting Software
-description: Excel-like, professional accounting software
+description: Spreadsheet inspired professional accounting software.
 confinement: strict
 grade: stable
 version: latest
